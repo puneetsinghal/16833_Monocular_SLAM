@@ -19,17 +19,18 @@
 */
 
 
-#include<iostream>
-#include<algorithm>
-#include<fstream>
-#include<chrono>
+#include <iostream>
+#include <algorithm>
+#include <fstream>
+#include <chrono>
 
-#include<ros/ros.h>
+#include <ros/ros.h>
 #include <cv_bridge/cv_bridge.h>
 
-#include<opencv2/core/core.hpp>
+#include <opencv2/core/core.hpp>
+// #include <opencv2/highgui/highgui.hpp>
 
-#include"../../../include/System.h"
+#include "../../../include/System.h"
 
 using namespace std;
 
@@ -56,7 +57,8 @@ int main(int argc, char **argv)
     }    
 
     // Create SLAM system. It initializes all system threads and gets ready to process frames.
-    ORB_SLAM2::System SLAM(argv[1],argv[2],ORB_SLAM2::System::MONOCULAR,true);
+
+    ORB_SLAM2::System SLAM(argv[1], argv[2], ORB_SLAM2::System::MONOCULAR,true);
 
     ImageGrabber igb(&SLAM);
 
@@ -75,6 +77,7 @@ int main(int argc, char **argv)
 
     return 0;
 }
+
 
 void ImageGrabber::GrabImage(const sensor_msgs::ImageConstPtr& msg)
 {

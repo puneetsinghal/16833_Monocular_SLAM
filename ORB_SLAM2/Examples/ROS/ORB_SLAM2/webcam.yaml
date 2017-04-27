@@ -1,0 +1,27 @@
+%YAML:1.0
+
+#--------------------------------------------------------------------------------------------
+# Camera Parameters. Adjust them!
+#--------------------------------------------------------------------------------------------
+
+# Camera calibration and distortion parameters (OpenCV) 
+image_width: 640
+image_height: 480
+camera_name: camera
+camera_matrix:
+  rows: 3
+  cols: 3
+  data: [871.7277760337859, 0, 301.1374288323754, 0, 870.279547568849, 243.6790392279812, 0, 0, 1]
+distortion_model: plumb_bob
+distortion_coefficients:
+  rows: 1
+  cols: 5
+  data: [0.1610106459229372, -0.3429692894356864, 0.007027000272076426, -0.01169803463978522, 0]
+rectification_matrix:
+  rows: 3
+  cols: 3
+  data: [1, 0, 0, 0, 1, 0, 0, 0, 1]
+projection_matrix:
+  rows: 3
+  cols: 4
+  data: [889.3602905273438, 0, 296.6412799606442, 0, 0, 892.531005859375, 245.6499170740281, 0, 0, 0, 1, 0]

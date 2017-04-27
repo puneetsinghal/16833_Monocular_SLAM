@@ -1,5 +1,5 @@
 <launch>
-    <!-- <group ns="$(arg name)"> -->
+    <group ns="camera">
         <node name="camera" pkg="uvc_camera" type="uvc_camera_node" output="screen">
             <param name="device" type="string" value="/dev/video1" />
             <param name="width" value="640" />
@@ -8,5 +8,5 @@
             <param name="exposure" value="0" />
             <param name="gain" value="100" />
         </node>
-    <!-- </group> -->
+    </group>
 </launch>
