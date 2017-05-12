@@ -1,0 +1,21 @@
+Camera Parameters: 
+- fx: 815.4
+- fy: 759.3
+- cx: 267.4
+- cy: 275.1
+- k1: -0.1
+- k2: 0.3
+- p1: 0
+- p2: 0
+- fps: 30
+- color order: RGB (ignored if grayscale)
+
+ORB Extractor Parameters: 
+- Number of Features: 1000
+- Scale Levels: 8
+- Scale Factor: 1.2
+- Initial Fast Threshold: 20
+- Minimum Fast Threshold: 7
+
+New Map created with 126 points
+
