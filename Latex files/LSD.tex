@@ -1,0 +1,16 @@
+In this section, we briefly describe the LSD algorithm. For more details, the reader is encouraged to refer to the original LSD paper[4].
+
+LSD is a direct featureless monocular SLAM algorithm that allows to build large-scale consistent maps of the environment. The algorithm uses highly accurate pose estimation based on direct image alignment, and reconstructs the 3D environment in real-time as a pose graph of keyframes. The global map is represented as a pose graph consisting of keyframes as vertices with 3D similarity transforms as edges, and this allows for incorporating multi scale environment nature. This algorithm runs in real-time on a CPU.
+
+The algorithm consists of three main parts which are tracking, depth estimation, and map optimization.
+
+For tracking, the rigid posed $\xi \in se(3)$ is estimated with respect to the current keyframe. This part continuously runs at the highest frequency of the pipeline. The depth map estimation part basically uses the tracked frames from part one to either replace the current frame if some conditions are met, or to refine this current frame. The third part which is map optimization consists of including the keyframe that has been replaced in the previous part (depth map estimation), and thus means that it is not going to be refined anymore, into the global map. This parts also contains loop closure and scale drift detection which is done by estimating a similarity transform $\xi \in sim(3)$ using a method called direct-$sim(3)$-image alignment (more details in the original paper[4]).
+
+For initialization, the first keyframe is initialized with random depth map and large variance. LSD best initializes if a sufficient translational camera movement is detected in the first few seconds.
+
+\subsection{Map Representation}
+As most state of the art SLAM algorithms, the map is represented as a pose graph of keyframes that captures the dependencies between all the keyframes that are added to the map.
+
+Each keyframe consists basically of an image, an inverse depth map, and variance of the inverse depth map. The edges of the pose graph represents similarity transforms between the keyframes.
+
+

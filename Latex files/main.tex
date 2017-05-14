@@ -1,0 +1,149 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%2345678901234567890123456789012345678901234567890123456789012345678901234567890
+%        1         2         3         4         5         6         7         8
+
+\documentclass[letterpaper, 12 pt, conference]{ieeeconf}  % Comment this line out if you need a4paper
+
+%\documentclass[a4paper, 10pt, conference]{ieeeconf}      % Use this line for a4 paper
+
+\IEEEoverridecommandlockouts                              % This command is only needed if 
+                                                          % you want to use the \thanks command
+
+\overrideIEEEmargins                                      % Needed to meet printer requirements.
+
+% See the \addtolength command later in the file to balance the column lengths
+% on the last page of the document
+
+% The following packages can be found on http:\\www.ctan.org
+%\usepackage{graphics} % for pdf, bitmapped graphics files
+%\usepackage{epsfig} % for postscript graphics files
+\usepackage{mathptmx} % assumes new font selection scheme installed
+\usepackage{times} % assumes new font selection scheme installed
+\usepackage{amsmath} % assumes amsmath package installed
+\usepackage{amssymb}  % assumes amsmath package installed
+\usepackage{enumerate}
+\usepackage{cite}
+\usepackage{graphicx} % for pdf, bitmapped graphics files
+%\usepackage[caption=false]{subfig}
+%\usepackage{enumerate}
+%\usepackage[english]{babel}
+%\usepackage{blindtext}
+%\usepackage{booktabs}
+%\usepackage{multirow}
+%\usepackage{capt-of}
+%\usepackage{stfloats}
+\usepackage{bm}%bold math
+\usepackage{color}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{mathtools}
+%\title{\LARGE \bf
+%Ergodic Coverage Using Sampling-based Motion Planning for Autonomous Exploration In Constrained Environments
+%}
+
+\title{\LARGE \bf
+Comparison of performance of ORB vs LSD SLAM on Highly-dynamic robots: Snake and Jumping robots
+}
+
+
+\author{Puneet Singhal, Puru Rastogi, and Hadi Salman% <-this % stops a space
+%\thanks{*This work was not supported by any organization}% <-this % stops a space
+\thanks{$^{1}$Puneet Singhal, Puru Rastogi, and Hadi Salman are with Carnegie Mellon University, Pittsburgh,PA 15213, USA
+	{\tt\small (psinghal@,prastogi,hadis@) andrew.cmu.edu}}
+}
+
+
+\begin{document}
+
+
+
+\maketitle
+\thispagestyle{empty}
+\pagestyle{empty}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{abstract}
+
+In this work, we evaluate the performance of ORB and LSD SLAM on highly dynamic robots: Snake Robot and Jumping Robot. Further, we later suggest different ways through which the performance of the evaluated algorithms could be improved on highly dynamic systems.
+
+\end{abstract}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Introduction}
+\input{Introduction}
+
+%%\section{Background}
+%%\label{sec:Background}
+%%\input{Background}
+
+
+\section{Implementation and Hardware}
+\label{sec:Hardware}
+\input{hardware}
+
+\section{ORB}
+\label{sec:ORB}
+\input{ORB}
+
+\section{LSD}
+\label{sec:LSD}
+\input{LSD}
+
+
+\begin{figure}
+	\centering
+	\includegraphics[width=1.0\linewidth]{figures/LSD_summary}
+	\caption{Pipeline of the LSD SLAM algorithm [4].}
+	\label{fig:lsdsummary}
+\end{figure}
+
+\section{Results}
+\label{sec:Results}
+\input{Results}
+
+\section{Conclusions}
+\label{conclusion}
+\input{conclusion}
+
+\section{Referneces}
+
+[1] Raúl Mur-Artal, J. M. M. Montiel and Juan D. Tardós., “ORB-SLAM: A Versatile and Accurate Monocular SLAM System,” in IEEE Transactions on Robotics, vol. 31, no. 5, pp. 1147-1163, October 2015.
+
+[2] R. Mur-Artal and J. D. Tard´os, “Fast relocalisation and loop closing in keyframe-based SLAM,” in Proc. IEEE Int. Conf. Robot. Autom., Hong Kong, Jun. 2014, pp. 846–853.
+
+[3] E. Rublee, V. Rabaud, K. Konolige, and G. Bradski, “ORB: An efficient alternative to SIFT or SURF,” in Proc. IEEE Int. Conf. Comput. Vision, Barcelona, Spain, Nov. 2011, pp. 2564–2571.
+
+[4] Engel J., Schöps T., Cremers D. (2014) LSD-SLAM: Large-Scale Direct Monocular SLAM. In: Fleet D., Pajdla T., Schiele B., Tuytelaars T. (eds) Computer Vision – ECCV 2014. ECCV 2014. Lecture Notes in Computer Science, vol 8690. Springer, Cham
+
+\addtolength{\textheight}{-12cm}   % This command serves to balance the column lengths
+                                  % on the last page of the document manually. It shortens
+                                  % the textheight of the last page by a suitable amount.
+                                  % This command does not take effect until the next page
+                                  % so it should come on the page before the last. Make
+                                  % sure that you do not shorten the textheight too much.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\section*{APPENDIX}
+%Appendixes should appear before the acknowledgment.
+
+%\section*{ACKNOWLEDGMENT}
+%The authors would like to acknowledge the assistance of Marin Kobilarov in implementation of the cross entropy method.
+
+
+%\bibliographystyle{IEEEtran}
+%\bibliography{references}
+\end{document}
+
+

@@ -1,0 +1,22 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9 64-bit) (preloaded format=pdftex 2016.10.18)  26 FEB 2017 16:46
+entering extended mode
+**C:/Users/B_Dokmak/Desktop/Paper/references.bib
+(C:/Users/B_Dokmak/Desktop/Paper/references.bib
+! Missing $ inserted.
+<inserted text> 
+                $
+<to be read again> 
+                   _
+l.50 @article{Acar_
+                   2003_6159,
+? 
+! Emergency stop.
+<inserted text> 
+                $
+<to be read again> 
+                   _
+l.50 @article{Acar_
+                   2003_6159,
+End of file on the terminal!
+
+!  ==> Fatal error occurred, no output PDF file produced!
